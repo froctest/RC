@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RCClient" />
+      <artifact name="RCServer" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="做好了基础功能,还添加了mathMod来进行数学计算">
+      <change afterPath="$PROJECT_DIR$/InternetUtils/InternetUtils.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InternetUtils/src/InternetUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RCClient_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RCClient.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RCServer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RCServer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.1.1/lib/src.zip!/java.base/java/net/Inet4Address.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.1.1/lib/src.zip!/java.base/java/net/InetAddress.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-18.0.1.1/lib/src.zip!/java.base/java/net/Socket.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FU0gsxOJAVNWugd0tNz5E0WVNj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/RC/src/main/kotlin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2643343&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\RC\src\main\kotlin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\RC\KotlinUtils\src" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="moder" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.JRun_RCClient">
+    <configuration name="JRun_RCClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.JRun_RCClient" />
+      <module name="RC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JRun_RCServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.JRun_RCServer" />
+      <module name="RC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RCClient.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RCClient/RCClient.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RCServer.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RCServer/RCServer.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run_RCClientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Run_RCClientKt" />
+      <module name="RC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JAR 应用程序.RCClient.jar" />
+      <item itemvalue="JAR 应用程序.RCServer.jar" />
+      <item itemvalue="Kotlin.Run_RCClientKt" />
+      <item itemvalue="应用程序.JRun_RCClient" />
+      <item itemvalue="应用程序.JRun_RCServer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.JRun_RCClient" />
+        <item itemvalue="应用程序.JRun_RCServer" />
+        <item itemvalue="JAR 应用程序.RCClient.jar" />
+        <item itemvalue="JAR 应用程序.RCServer.jar" />
+        <item itemvalue="Kotlin.Run_RCClientKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="" />
+      <created>1664531471402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664531471402</updated>
+    </task>
+    <task id="LOCAL-00001" summary="做好了基础功能,还添加了mathMod来进行数学计算">
+      <created>1664637279336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664637279336</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="做好了基础功能,还添加了mathMod来进行数学计算" />
+    <option name="LAST_COMMIT_MESSAGE" value="做好了基础功能,还添加了mathMod来进行数学计算" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
