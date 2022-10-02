@@ -38,9 +38,11 @@ class Run_RCClient private constructor(){
 
 //自动创建服务器
 fun autoClient() {
+    Init.init()
     val run_rcserver=Run_RCClient.Builder().build{}
 }
 fun autoClientConnect(aip:String="127.0.0.1",aport:Int=18848) {
+    Init.init()
     val run_rcserver=Run_RCClient.Builder().build{
         ip=aip
         port=aport
@@ -49,6 +51,7 @@ fun autoClientConnect(aip:String="127.0.0.1",aport:Int=18848) {
 
 //标准服务器
 fun standardClient() {
+    Init.init()
     val sca=Scanner(System.`in`)
     println("请输入服务器IP")
     val aip=sca.nextLine()

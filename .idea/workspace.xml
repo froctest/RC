@@ -7,22 +7,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="做好了基础功能,还添加了mathMod来进行数学计算">
-      <change afterPath="$PROJECT_DIR$/InternetUtils/InternetUtils.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InternetUtils/src/InternetUtils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RCClient_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RCClient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RCServer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RCServer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/JRun_RCServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" afterDir="false" />
     </list>
@@ -35,8 +21,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Interface" />
         <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Sealed Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -67,7 +55,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-11&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Project/RC/src/main/kotlin&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2643343&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -81,6 +69,7 @@
       <recent name="D:\Project\RC\KotlinUtils\src" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="pluginer.events" />
       <recent name="moder" />
     </key>
   </component>
@@ -111,25 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RCClient.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RCClient/RCClient.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RCServer.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RCServer/RCServer.jar" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Run_RCClientKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.Run_RCClientKt" />
-      <module name="RC" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JAR 应用程序.RCClient.jar" />
-      <item itemvalue="JAR 应用程序.RCServer.jar" />
-      <item itemvalue="Kotlin.Run_RCClientKt" />
       <item itemvalue="应用程序.JRun_RCClient" />
       <item itemvalue="应用程序.JRun_RCServer" />
     </list>
@@ -137,9 +108,6 @@
       <list>
         <item itemvalue="应用程序.JRun_RCClient" />
         <item itemvalue="应用程序.JRun_RCServer" />
-        <item itemvalue="JAR 应用程序.RCClient.jar" />
-        <item itemvalue="JAR 应用程序.RCServer.jar" />
-        <item itemvalue="Kotlin.Run_RCClientKt" />
       </list>
     </recent_temporary>
   </component>
@@ -159,8 +127,40 @@
       <option name="project" value="LOCAL" />
       <updated>1664637279336</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix: 修复了连接Bug&#10;&#10;修复了之前测试时留下的痕迹导致了每次都会连接一个不存在的服务器">
+      <created>1664674538841</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664674538841</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能">
+      <created>1664687641384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664687641384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能">
+      <created>1664687652537</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664687652537</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -170,12 +170,30 @@
             <State />
           </value>
         </entry>
+        <entry key="dbbce6c4-52ed-40fd-ae94-54f68b5f527f">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="dbbce6c4-52ed-40fd-ae94-54f68b5f527f" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="做好了基础功能,还添加了mathMod来进行数学计算" />
-    <option name="LAST_COMMIT_MESSAGE" value="做好了基础功能,还添加了mathMod来进行数学计算" />
+    <MESSAGE value="fix: 修复了连接Bug&#10;&#10;修复了之前测试时留下的痕迹导致了每次都会连接一个不存在的服务器" />
+    <MESSAGE value="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

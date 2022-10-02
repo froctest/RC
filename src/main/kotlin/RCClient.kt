@@ -1,6 +1,8 @@
 import moder.Data
+import pluginer.EventRegister
+import pluginer.events.EventCallback
 
-class RCClient private constructor(private val rcsocket:RCSocket){
+class RCClient internal constructor(private val rcsocket:RCSocket){
 
     private var ip="127.0.0.1"
     private var port=18848
@@ -13,32 +15,27 @@ class RCClient private constructor(private val rcsocket:RCSocket){
     }
     //发送一条完整的指令(不包括Data)
     fun send(command: String){
-        sendLine(command)
-        sendCommandEnd()
+        rcsocket.send(command)
     }
     //发送一行指令,后面可以再衔接Data
     fun sendCommandStart(command: String,data: Data? = null){
-        sendLine(command,flush = true)
-        if (data != null)sendData(data)
+        rcsocket.sendCommandStart(command,data)
     }
     //发送最后的数据,指令结束
     fun sendDataEnd(data: Data){
-        sendDataLine(data.getBase64())
-        sendCommandEnd()
+        rcsocket.sendDataEnd(data)
     }
     //发送数据
     fun sendData(data: Data){
-        sendDataLine(data.getBase64())
+        rcsocket.sendData(data)
     }
     //发送数据行(请保证该数据行已经base64编码过了)
     fun sendDataLine(data: String){
-        if (!sentData)sentData=true
-        sendLine(data,flush = true)
+        rcsocket.sendDataLine(data)
     }
     //指令结束
     fun sendCommandEnd(){
-        if (sentData)sendLine("\$#DataEnd")
-        sendLine("\$#End",flush = true)
+        rcsocket.sendCommandEnd()
     }
     //冲刷缓存
     fun flush(){
@@ -46,7 +43,9 @@ class RCClient private constructor(private val rcsocket:RCSocket){
     }
 
     init {
-        println("连接到服务器")
+        EventRegister.notifyEvent(EventCallback.ClientConnected::class.java){
+            connected(this@RCClient)
+        }
     }
 
     class Builder{

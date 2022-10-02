@@ -1,6 +1,6 @@
 package moder
 
-import java.util.*
+import Init
 
 object Moder {
 
@@ -8,7 +8,7 @@ object Moder {
         var command: Command?= getIncCommand(commandLine)
         if (command != null)return command
         var maxPro = -1
-        val services = ServiceLoader.load(Mod::class.java)
+        val services = Init.ModLoader.mods
         for (item in services) {
             for (commandAction in item.getCommands()){
                 val pro = commandAction.canCommand(commandLine)

@@ -1,3 +1,5 @@
+import pluginer.EventRegister
+import pluginer.events.EventCallback
 import java.net.ServerSocket
 import kotlin.concurrent.thread
 
@@ -9,13 +11,20 @@ class RCServer private constructor(){
     private var isStop = false
     private fun start():RCServer{
         server=ServerSocket(port)
+        //回调插件监听(服务器被创建)
+        EventRegister.notifyEvent(EventCallback.ServerCreated::class.java){
+            created(this@RCServer)
+        }
 
         thread {
             while (!isStop){
                 val socket=server.accept()
-                println("用户连接到服务器: ${socket.inetAddress.hostAddress}")
                 thread {
-                    RCSocket(socket,this)
+                    val rcsocket=RCSocket(socket,this)
+                    //回调插件监听(用户连接)
+                    EventRegister.notifyEvent(EventCallback.ServerConnectedUser::class.java){
+                        connected(this@RCServer,rcsocket)
+                    }
                 }
             }
         }
