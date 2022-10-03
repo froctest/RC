@@ -1,11 +1,8 @@
 package moder
 
+import moder.register.Registers
+
 interface Mod {
 
-    /**
-     * 返回支持的指令
-     *
-     * @return
-     */
-    fun getCommands():List<Command>
+    fun loaded(register: Registers){}
 }

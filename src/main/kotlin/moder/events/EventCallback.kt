@@ -1,4 +1,4 @@
-package pluginer.events
+package moder.events
 
 import RCClient
 import RCServer
@@ -9,7 +9,7 @@ interface EventCallback {
      * 服务器被创建
      *
      */
-    interface ServerCreated : EventCallback{
+    interface ServerCreated : EventCallback {
         fun created(server:RCServer)
     }
 
@@ -17,7 +17,7 @@ interface EventCallback {
      * 服务器连接到用户RCSocket
      *
      */
-    interface ServerConnectedUser : EventCallback{
+    interface ServerConnectedUser : EventCallback {
         fun connected(server:RCServer,socket: RCSocket)
     }
 
@@ -25,7 +25,7 @@ interface EventCallback {
      * 客户端连接到服务器
      *
      */
-    interface ClientConnected : EventCallback{
+    interface ClientConnected : EventCallback {
         fun connected(client:RCClient)
     }
 
@@ -33,7 +33,7 @@ interface EventCallback {
      * RCSocket连接到
      *
      */
-    interface RCSocketConnected : EventCallback{
+    interface RCSocketConnected : EventCallback {
         fun connect(rcSocket: RCSocket)
     }
 
@@ -41,7 +41,7 @@ interface EventCallback {
      * RCSocket连接到客户端
      *
      */
-    interface RCSocketConnectedClient : EventCallback{
+    interface RCSocketConnectedClient : EventCallback {
         fun connect(rcSocket: RCSocket)
     }
 
@@ -49,7 +49,7 @@ interface EventCallback {
      * RCSocket连接到服务器
      *
      */
-    interface RCSocketConnectedServer : EventCallback{
+    interface RCSocketConnectedServer : EventCallback {
         fun connect(rcSocket: RCSocket)
     }
 
@@ -57,7 +57,7 @@ interface EventCallback {
      * RCSocket断开连接
      *
      */
-    interface RCSocketCloseConnected : EventCallback{
+    interface RCSocketCloseConnected : EventCallback {
         fun close(socket: RCSocket)
     }
 //    interface ServerCreated : EventCallback{

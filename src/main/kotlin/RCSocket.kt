@@ -1,10 +1,10 @@
-import moder.Command
-import moder.Data
-import moder.Invoker
-import moder.Moder
-import moder.Result
-import pluginer.EventRegister
-import pluginer.events.EventCallback
+import moder.command.Command
+import moder.command.Data
+import moder.command.Invoker
+import moder.command.Commander
+import moder.command.Result
+import moder.register.EventRegister
+import moder.events.EventCallback
 import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
@@ -19,14 +19,14 @@ class RCSocket private constructor(private val socket: Socket){
     //给服务器端的构造器
     private lateinit var rcServer: RCServer
     constructor(socket: Socket,rcServer: RCServer):this(socket){
-        EventRegister.notifyEvent(EventCallback.RCSocketConnectedClient::class.java){
+        EventRegister.notifyRegistration(EventCallback.RCSocketConnectedClient::class.java){
             connect(this@RCSocket)
         }
         this.rcServer=rcServer
     }
     //给客户端的构造器
     constructor(ip:String,port:Int):this(Socket(ip,port)){
-        EventRegister.notifyEvent(EventCallback.RCSocketConnectedServer::class.java){
+        EventRegister.notifyRegistration(EventCallback.RCSocketConnectedServer::class.java){
             connect(this@RCSocket)
         }
     }
@@ -36,12 +36,12 @@ class RCSocket private constructor(private val socket: Socket){
     private val reader = BufferedReader(InputStreamReader(input))
     private val writer = BufferedWriter(OutputStreamWriter(output))
     init {
-        EventRegister.notifyEvent(EventCallback.RCSocketConnected::class.java){
+        EventRegister.notifyRegistration(EventCallback.RCSocketConnected::class.java){
             connect(this@RCSocket)
         }
         thread {
             try {
-                val commandExecute=fun(command:Command,commandLine:String,data:Data?){command.executeCommand(commandLine, Invoker(data), Result(writer))}
+                val commandExecute=fun(command: Command, commandLine:String, data: Data?){command.executeCommand(commandLine, Invoker(data), Result(writer))}
 
                 var commanding = true
                 var dating = false
@@ -63,7 +63,7 @@ class RCSocket private constructor(private val socket: Socket){
                         }else false
                         //指令存储
 
-                        command = Moder.getCommand(line)
+                        command = Commander.getCommand(line)
                         commandLine = line
                         if (simpleCommand){
                             commandExecute(command,commandLine,null)
@@ -92,7 +92,7 @@ class RCSocket private constructor(private val socket: Socket){
                     commandExecute(command!!,commandLine!!,data)
                 }
             }catch (connectionReset:SocketException){
-                EventRegister.notifyEvent(EventCallback.RCSocketCloseConnected::class.java){
+                EventRegister.notifyRegistration(EventCallback.RCSocketCloseConnected::class.java){
                     close(this@RCSocket)
                 }
             }

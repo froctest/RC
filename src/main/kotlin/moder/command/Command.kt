@@ -1,4 +1,4 @@
-package moder
+package moder.command
 
 interface Command {
     /**

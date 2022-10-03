@@ -1,5 +1,5 @@
-import pluginer.EventRegister
-import pluginer.events.EventCallback
+import moder.register.EventRegister
+import moder.events.EventCallback
 import java.net.ServerSocket
 import kotlin.concurrent.thread
 
@@ -12,7 +12,7 @@ class RCServer private constructor(){
     private fun start():RCServer{
         server=ServerSocket(port)
         //回调插件监听(服务器被创建)
-        EventRegister.notifyEvent(EventCallback.ServerCreated::class.java){
+        EventRegister.notifyRegistration(EventCallback.ServerCreated::class.java){
             created(this@RCServer)
         }
 
@@ -22,7 +22,7 @@ class RCServer private constructor(){
                 thread {
                     val rcsocket=RCSocket(socket,this)
                     //回调插件监听(用户连接)
-                    EventRegister.notifyEvent(EventCallback.ServerConnectedUser::class.java){
+                    EventRegister.notifyRegistration(EventCallback.ServerConnectedUser::class.java){
                         connected(this@RCServer,rcsocket)
                     }
                 }
@@ -40,7 +40,7 @@ class RCServer private constructor(){
     fun getPort()=port
 
 
-    class Builder(){
+    class Builder {
 
         var port=18848
 

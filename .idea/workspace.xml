@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="RCClient" />
@@ -7,10 +10,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能">
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Init.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Init.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/StandardMod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/StandardMod.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Invoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Invoker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/register/CommandRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/register/CommandRegister.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/register/EventRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/register/EventRegister.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/register/Register.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/register/Register.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/moder.Mod" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/moder.Mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +51,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2FU0gsxOJAVNWugd0tNz5E0WVNj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,19 +62,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/RC/src/main/kotlin&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2643343&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "jbr-11",
+    "last_opened_file_path": "D:/Project/RC/src/main/kotlin",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2643343",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\RC\src\main\kotlin" />
@@ -69,11 +84,14 @@
       <recent name="D:\Project\RC\KotlinUtils\src" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="pluginer.events" />
-      <recent name="moder" />
+      <recent name="moder.command" />
+      <recent name="mod.standardmod.eventlistener" />
+      <recent name="mod.standardmod.command" />
+      <recent name="moder.register" />
+      <recent name="mod.standardmod" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.JRun_RCClient">
+  <component name="RunManager" selected="应用程序.JRun_RCServer">
     <configuration name="JRun_RCClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.JRun_RCClient" />
       <module name="RC" />
@@ -106,8 +124,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.JRun_RCClient" />
         <item itemvalue="应用程序.JRun_RCServer" />
+        <item itemvalue="应用程序.JRun_RCClient" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +166,35 @@
       <option name="project" value="LOCAL" />
       <updated>1664687652537</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能">
+      <created>1664800328019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664800328019</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组">
+      <created>1664802706422</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664802706422</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组">
+      <created>1664802940265</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664802940265</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组">
+      <created>1664802966999</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664802966999</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -193,7 +239,9 @@
     <MESSAGE value="做好了基础功能,还添加了mathMod来进行数学计算" />
     <MESSAGE value="fix: 修复了连接Bug&#10;&#10;修复了之前测试时留下的痕迹导致了每次都会连接一个不存在的服务器" />
     <MESSAGE value="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能" />
+    <MESSAGE value="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组" />
+    <MESSAGE value="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

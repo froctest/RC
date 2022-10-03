@@ -1,10 +1,10 @@
-package plugin.standardplugin
+package mod.standardmod.eventlistener
 
 import RCServer
 import RCSocket
-import pluginer.events.EventCallback
+import moder.events.EventCallback
 
-class P_UserConnectListener : EventCallback.ServerConnectedUser {
+class EL_UserConnectListener : EventCallback.ServerConnectedUser {
     override fun connected(server: RCServer, socket: RCSocket) {
         println("用户连接到服务器: ${socket.getInetAddress().hostAddress}")
     }

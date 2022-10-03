@@ -1,11 +1,24 @@
-package mod
+package mod.standardmod
 
-import moder.Command
+import mod.standardmod.command.C_math
+import mod.standardmod.eventlistener.*
 import moder.Mod
-import mod.standardmod.M_math
+import moder.events.EventCallback
+import moder.register.Registers
 
 class StandardMod : Mod {
-    override fun getCommands(): List<Command> {
-        return listOf(M_math())
+
+    override fun loaded(register: Registers) {
+        val commandRegister=register.commandRegister
+        commandRegister.register(C_math::class.java, C_math())
+
+        val eventRegistry=register.eventRegister
+        eventRegistry.register(EventCallback.ServerCreated::class.java, EL_ServerClient())
+        eventRegistry.register(EventCallback.ServerConnectedUser::class.java, EL_UserConnectListener())
+        eventRegistry.register(EventCallback.ClientConnected::class.java, EL_ClientConnectedServerListener())
+        eventRegistry.register(EventCallback.RCSocketConnected::class.java, EL_RCSocketConnectedListener())
+        eventRegistry.register(EventCallback.RCSocketConnectedServer::class.java, EL_RCSocketConnectedServerListener())
+        eventRegistry.register(EventCallback.RCSocketConnectedClient::class.java, EL_RCSocketConnectedClientListener())
+        eventRegistry.register(EventCallback.RCSocketCloseConnected::class.java, EL_RCSocketCloseListener())
     }
 }

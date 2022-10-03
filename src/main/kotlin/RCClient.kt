@@ -1,6 +1,6 @@
-import moder.Data
-import pluginer.EventRegister
-import pluginer.events.EventCallback
+import moder.command.Data
+import moder.register.EventRegister
+import moder.events.EventCallback
 
 class RCClient internal constructor(private val rcsocket:RCSocket){
 
@@ -43,7 +43,7 @@ class RCClient internal constructor(private val rcsocket:RCSocket){
     }
 
     init {
-        EventRegister.notifyEvent(EventCallback.ClientConnected::class.java){
+        EventRegister.notifyRegistration(EventCallback.ClientConnected::class.java){
             connected(this@RCClient)
         }
     }

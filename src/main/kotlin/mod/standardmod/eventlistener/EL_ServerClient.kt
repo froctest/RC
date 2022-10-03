@@ -1,11 +1,11 @@
-package plugin.standardplugin
+package mod.standardmod.eventlistener
 
 import RCServer
-import pluginer.events.EventCallback
+import moder.events.EventCallback
 import java.util.*
 import kotlin.concurrent.thread
 
-class P_ServerClient : EventCallback.ServerCreated {
+class EL_ServerClient : EventCallback.ServerCreated {
     override fun created(server: RCServer) {
         thread {
             val client=RCClient.Builder().build{

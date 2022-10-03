@@ -1,13 +1,13 @@
-package mod.standardmod
+package mod.standardmod.command
 
-import moder.Command
-import moder.Invoker
-import moder.Result
+import moder.command.Command
+import moder.command.Invoker
+import moder.command.Result
 import start
 import java.math.BigDecimal
 import java.math.MathContext
 
-class M_math : Command {
+class C_math : Command {
     override fun canCommand(command: String): Int {
         return when{
             command start "/math" -> 1

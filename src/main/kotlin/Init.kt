@@ -1,6 +1,5 @@
 import moder.Mod
-import pluginer.EventRegister
-import pluginer.Plugin
+import moder.register.Registers
 import java.util.*
 
 object Init {
@@ -10,27 +9,19 @@ object Init {
     }
 
     private fun initing(){
-        PluginLoader.init()
+        ModLoader.init()
     }
 
     object ModLoader{
-        val mods by lazy {
+        private val mods by lazy {
             ServiceLoader.load(Mod::class.java)
         }
-    }
-
-    object PluginLoader{
-        val plugins by lazy {
-            ServiceLoader.load(Plugin::class.java)
-        }
-
         private var isInit=false
         internal fun init(){
             if (isInit)return
-            for (plugin in plugins){
-                plugin.loaded(EventRegister)
+            for (mod in mods){
+                mod.loaded(Registers)
             }
         }
     }
-
 }
