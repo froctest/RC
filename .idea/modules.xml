@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/InternetUtils/InternetUtils.iml" filepath="$PROJECT_DIR$/InternetUtils/InternetUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/KotlinUtils/KotlinUtils.iml" filepath="$PROJECT_DIR$/KotlinUtils/KotlinUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/RC.iml" filepath="$PROJECT_DIR$/RC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StandardMod/StandardMod.iml" filepath="$PROJECT_DIR$/StandardMod/StandardMod.iml" />
     </modules>
   </component>
 </project>

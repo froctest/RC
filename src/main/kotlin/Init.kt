@@ -1,6 +1,4 @@
-import moder.Mod
-import moder.register.Registers
-import java.util.*
+import moder.ModLoader
 
 object Init {
     private var isInit=false
@@ -12,16 +10,4 @@ object Init {
         ModLoader.init()
     }
 
-    object ModLoader{
-        private val mods by lazy {
-            ServiceLoader.load(Mod::class.java)
-        }
-        private var isInit=false
-        internal fun init(){
-            if (isInit)return
-            for (mod in mods){
-                mod.loaded(Registers)
-            }
-        }
-    }
 }

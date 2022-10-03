@@ -1,14 +1,15 @@
-package mod.standardmod
+package standardmod
 
-import mod.standardmod.command.C_math
-import mod.standardmod.eventlistener.*
+import standardmod.command.C_math
 import moder.Mod
 import moder.events.EventCallback
 import moder.register.Registers
+import standardmod.eventlistener.*
 
 class StandardMod : Mod {
 
     override fun loaded(register: Registers) {
+        println("Loaded")
         val commandRegister=register.commandRegister
         commandRegister.register(C_math::class.java, C_math())
 

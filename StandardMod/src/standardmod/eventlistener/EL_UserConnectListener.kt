@@ -1,4 +1,4 @@
-package mod.standardmod.eventlistener
+package standardmod.eventlistener
 
 import RCServer
 import RCSocket

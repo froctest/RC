@@ -13,5 +13,6 @@
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="module" module-name="KotlinUtils" />
     <orderEntry type="module" module-name="InternetUtils" />
+    <orderEntry type="library" name="github.linyuzai.concept.plugin.jar" level="project" />
   </component>
 </module>

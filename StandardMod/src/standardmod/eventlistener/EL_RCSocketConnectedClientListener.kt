@@ -1,4 +1,4 @@
-package mod.standardmod.eventlistener
+package standardmod.eventlistener
 
 import RCSocket
 import moder.events.EventCallback

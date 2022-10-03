@@ -5,23 +5,31 @@
   </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="RCClient" />
-      <artifact name="RCServer" />
+      <artifact name="StandardMod" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组">
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 让模组可以动态加载&#10;&#10;用了Concept-Plugin开源库来实现动态加载Mod&#10;Concept-Plugin开源库地址:https://github.com/Linyuzai/concept/wiki/Concept-Plugin&#10;运行时会创建一个Mods文件夹&#10;将Mod放进去,下次启动时就会加载了&#10;&#10;BREAKING CHANGE: 让模组可以动态加载&#10;优化了文件结构&#10;标准Mod现在分成一个独立的模块">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/StandardMod.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/github_linyuzai_concept_plugin_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mods/StandardMod.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StandardMod/StandardMod.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/moder/ModLoader.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Init.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Init.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/StandardMod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/StandardMod.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Invoker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Invoker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/register/CommandRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/register/CommandRegister.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/register/EventRegister.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/register/EventRegister.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/register/Register.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/register/Register.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/services/moder.Mod" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/services/moder.Mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/StandardMod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/StandardMod.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/command/C_math.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/command/C_math.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_ClientConnectedServerListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_ClientConnectedServerListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_RCSocketCloseListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_RCSocketCloseListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_RCSocketConnectedClientListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_RCSocketConnectedClientListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_RCSocketConnectedListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_RCSocketConnectedListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_RCSocketConnectedServerListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_RCSocketConnectedServerListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_ServerClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_ServerClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mod/standardmod/eventlistener/EL_UserConnectListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/StandardMod/src/standardmod/eventlistener/EL_UserConnectListener.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +72,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "jbr-11",
     "last_opened_file_path": "D:/Project/RC/src/main/kotlin",
-    "project.structure.last.edited": "工件",
+    "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2643343",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -81,6 +93,7 @@
       <recent name="D:\Project\RC\src\main\kotlin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\RC\Mods" />
       <recent name="D:\Project\RC\KotlinUtils\src" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -118,13 +131,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="RC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="应用程序.JRun_RCClient" />
       <item itemvalue="应用程序.JRun_RCServer" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.JRun_RCServer" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="应用程序.JRun_RCClient" />
       </list>
     </recent_temporary>
@@ -194,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664802966999</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组">
+      <created>1664805455904</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664805455904</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -241,7 +270,8 @@
     <MESSAGE value="feat: 增加了插件功能&#10;&#10;一个类继承了Plugin时就可以把该类当成插件初始化类(必须有无参构造器)&#10;&#10;BREAKING CHANGE: 增加了插件功能" />
     <MESSAGE value="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组" />
     <MESSAGE value="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 将插件与模组整合起来统一为模组&#10;&#10;原本模组只能扩展指令&#10;插件指令监听事件&#10;现在模组拥有插件功能,并且插件被移除&#10;并且指令也需要与事件一样动态注册才能使用&#10;&#10;BREAKING CHANGE: 将插件与模组整合起来统一为模组" />
+    <MESSAGE value="feat: 让模组可以动态加载&#10;&#10;用了Concept-Plugin开源库来实现动态加载Mod&#10;Concept-Plugin开源库地址:https://github.com/Linyuzai/concept/wiki/Concept-Plugin&#10;运行时会创建一个Mods文件夹&#10;将Mod放进去,下次启动时就会加载了&#10;&#10;BREAKING CHANGE: 让模组可以动态加载&#10;优化了文件结构&#10;标准Mod现在分成一个独立的模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 让模组可以动态加载&#10;&#10;用了Concept-Plugin开源库来实现动态加载Mod&#10;Concept-Plugin开源库地址:https://github.com/Linyuzai/concept/wiki/Concept-Plugin&#10;运行时会创建一个Mods文件夹&#10;将Mod放进去,下次启动时就会加载了&#10;&#10;BREAKING CHANGE: 让模组可以动态加载&#10;优化了文件结构&#10;标准Mod现在分成一个独立的模块" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

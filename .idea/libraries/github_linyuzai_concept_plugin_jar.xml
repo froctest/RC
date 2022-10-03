@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="github.linyuzai.concept.plugin.jar" type="repository">
+    <properties maven-id="com.github.linyuzai:concept-plugin-jar:1.0.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/linyuzai/concept-plugin-jar/1.0.1/concept-plugin-jar-1.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/linyuzai/concept-plugin-core/1.0.1/concept-plugin-core-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/concept-plugin-core-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

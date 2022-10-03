@@ -1,4 +1,4 @@
-package mod.standardmod.command
+package standardmod.command
 
 import moder.command.Command
 import moder.command.Invoker
