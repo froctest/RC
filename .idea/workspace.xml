@@ -10,7 +10,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 将标准模组里的ServerClient分解为一个独立的模组&#10;&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;这个模组负责提供Server的命令行交互&#10;&#10;BREAKING CHANGE:&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;所以标准模组以后不提供与单独运行相关的功能" />
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 将标准模组里的ServerClient分解为一个独立的模组&#10;&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;这个模组负责提供Server的命令行交互&#10;&#10;BREAKING CHANGE:&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;所以标准模组以后不提供与单独运行相关的功能">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/RCConnected.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/RCHandle.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/CommandExecutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +94,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.JRun_RCClient">
+  <component name="RunManager" selected="应用程序.JRun_RCServer">
     <configuration name="JRun_RCClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.JRun_RCClient" />
       <module name="RC" />
@@ -128,8 +135,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.JRun_RCClient" />
         <item itemvalue="应用程序.JRun_RCServer" />
+        <item itemvalue="应用程序.JRun_RCClient" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
@@ -220,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664851350740</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: 将标准模组里的ServerClient分解为一个独立的模组&#10;&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;这个模组负责提供Server的命令行交互&#10;&#10;BREAKING CHANGE:&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;所以标准模组以后不提供与单独运行相关的功能">
+      <created>1664851458495</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664851458495</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
