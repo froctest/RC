@@ -1,5 +1,6 @@
-package standardmod.eventlistener
+package eventlistener
 
+import RCClient
 import RCServer
 import moder.events.EventCallback
 import java.util.*
