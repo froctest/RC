@@ -2,7 +2,7 @@ package moder.command
 
 import java.io.BufferedWriter
 
-class Result (private val bufferedWriter: BufferedWriter) {
+class Result (internal val bufferedWriter: BufferedWriter) {
     private val data= Data()
 
     fun println(string: String): Result {

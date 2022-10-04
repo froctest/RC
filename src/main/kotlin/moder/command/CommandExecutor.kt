@@ -1,6 +1,7 @@
 package moder.command
 
 import start
+import java.io.BufferedWriter
 
 class CommandExecutor{
     companion object{
@@ -22,7 +23,7 @@ class CommandExecutor{
      * @return
      */
     @Synchronized
-    fun execute (aCommandLine:String,commandExecute:(Command,String,Data?)->Unit):Boolean{
+    fun execute (aCommandLine:String,commandExecute:(Command,String,Data?,BufferedWriter)->Unit,writer: BufferedWriter):Boolean{
         var line = aCommandLine.trim()
         if (!isExecuteCommandLine(line)) {
             println(line)
@@ -39,7 +40,7 @@ class CommandExecutor{
             command = Commander.getCommand(line)
             commandLine = line
             if (simpleCommand){
-                commandExecute(command?:throw NullPointerException("没有模组提供适用的指令"), commandLine!!,null)
+                commandExecute(command?:throw NullPointerException("没有模组提供适用的指令"), commandLine!!,null,writer)
                 return true
             }
             commanding = false
@@ -62,7 +63,7 @@ class CommandExecutor{
         }
         if (line != "$#End") return false
         //指令处理
-        commandExecute(command!!,commandLine!!,data)
+        commandExecute(command!!,commandLine!!,data,writer)
         return true
     }
 }

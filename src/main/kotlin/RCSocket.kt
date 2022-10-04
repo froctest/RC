@@ -1,4 +1,5 @@
-import moder.command.*
+import moder.command.Commander
+import moder.command.Data
 import moder.events.EventCallback
 import moder.register.EventRegister
 import java.io.BufferedReader
@@ -36,29 +37,10 @@ class RCSocket private constructor(private val socket: Socket) : RCConnected{
         }
         thread {
             try {
-                val commandExecute=fun(command: Command, commandLine:String, data: Data?){command.executeCommand(commandLine, Invoker(data), Result(writer))}
 
-                val commandExecutors=HashMap<String,CommandExecutor>()
-                var lastKey ="^^NULL^^"
                 while (true){
-                    var line=reader.readLine() ?:continue
-                    val key=if (line start "^"){
-                        val aKey=line.split(" ")[0]
-                        line=line.replaceFirst("$aKey ","")
-                        aKey
-                    }else{
-                        if (CommandExecutor.isExecuteCommandStart(line)){
-                            lastKey=""+System.nanoTime()
-                        }
-                        lastKey
-                    }
-
-                    if (!commandExecutors.containsKey(key))commandExecutors[key]=CommandExecutor()
-                    val commandExecutor=commandExecutors[key]!!
-                    thread {
-                        if (commandExecutor.execute(line,commandExecute))
-                            commandExecutors.remove(key)
-                    }
+                    val line=reader.readLine() ?:continue
+                    Commander.executeCommand(line,writer)
                 }
 
             }catch (connectionReset:SocketException){
