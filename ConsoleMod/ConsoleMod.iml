@@ -8,8 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="RC" />
-    <orderEntry type="module" module-name="InternetUtils" />
-    <orderEntry type="module" module-name="KotlinUtils" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
