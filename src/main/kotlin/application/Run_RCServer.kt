@@ -1,11 +1,12 @@
 package application
 
 import Init
+import MsgListener
 import RCServer
 import java.util.*
 
 class Run_RCServer private constructor(val aPort:Int){
-    private var rcServer:RCServer = RCServer.Builder().build { port=aPort}
+    private var rcServer:RCServer = RCServer.Builder().build(MsgListener.getConsoleInstance()) { port=aPort}
 //    val rcSocket=RCSocket("127.0.0.1",aPort)
 //
 //    init {

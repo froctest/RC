@@ -15,13 +15,13 @@ class RCClient internal constructor(private val rcsocket:RCSocket):RCConnected b
     class Builder{
         var ip:String="127.0.0.1"
         var port:Int=18848
-        fun build(buildFun:Builder.() -> Unit):RCClient{
+        fun build(msgListener: MsgListener,buildFun:Builder.() -> Unit):RCClient{
             this.buildFun()
-            return building()
+            return building(msgListener)
         }
 
-        private fun building():RCClient{
-            val rcsocket=RCSocket(ip,port)
+        private fun building(msgListener: MsgListener):RCClient{
+            val rcsocket=RCSocket(ip,port,msgListener)
             val build=RCClient(rcsocket)
             build.ip=ip
             build.port=port

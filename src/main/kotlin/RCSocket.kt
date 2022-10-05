@@ -11,17 +11,17 @@ import java.net.Socket
 import java.net.SocketException
 import kotlin.concurrent.thread
 
-class RCSocket private constructor(private val socket: Socket) : RCConnected{
+class RCSocket private constructor(private val socket: Socket,msgListener: MsgListener) : RCConnected{
     //给服务器端的构造器
     private lateinit var rcServer: RCServer
-    internal constructor(socket: Socket,rcServer: RCServer):this(socket){
+    internal constructor(socket: Socket,rcServer: RCServer,msgListener: MsgListener):this(socket,msgListener){
         EventRegister.notifyRegistration(EventCallback.RCSocketConnectedClient::class.java){
             connect(this@RCSocket)
         }
         this.rcServer=rcServer
     }
     //给客户端的构造器
-    internal constructor(ip:String,port:Int):this(Socket(ip,port)){
+    internal constructor(ip:String,port:Int,msgListener: MsgListener):this(Socket(ip,port),msgListener){
         EventRegister.notifyRegistration(EventCallback.RCSocketConnectedServer::class.java){
             connect(this@RCSocket)
         }
@@ -41,7 +41,7 @@ class RCSocket private constructor(private val socket: Socket) : RCConnected{
                 while (true){
                     val line=reader.readLine() ?:continue
                     try {
-                        Commander.executeCommand(line,writer)
+                        Commander.executeCommand(line,writer,msgListener)
                     }catch (e:Exception){
                         e.printStackTrace()
                     }

@@ -1,5 +1,7 @@
 package application
 
+import Init
+import MsgListener
 import RCClient
 import java.util.*
 
@@ -7,7 +9,7 @@ class Run_RCClient private constructor(){
 
     private var ip="127.0.0.1"
     private var port=18848
-    private var rcClient:RCClient = RCClient.Builder().build{}
+    private var rcClient:RCClient = RCClient.Builder().build(MsgListener.getConsoleInstance()){}
 
     init {
         val sca=Scanner(System.`in`)
@@ -39,11 +41,11 @@ class Run_RCClient private constructor(){
 //自动创建服务器
 fun autoClient() {
     Init.init()
-    val run_rcserver=Run_RCClient.Builder().build{}
+    Run_RCClient.Builder().build{}
 }
 fun autoClientConnect(aip:String="127.0.0.1",aport:Int=18848) {
     Init.init()
-    val run_rcserver=Run_RCClient.Builder().build{
+    Run_RCClient.Builder().build{
         ip=aip
         port=aport
     }
@@ -57,7 +59,7 @@ fun standardClient() {
     val aip=sca.nextLine()
     println("输入服务器端口")
     val aport=sca.nextInt()
-    val run_rcclient=Run_RCClient.Builder().build{
+    Run_RCClient.Builder().build{
         ip=aip
         port=aport
     }

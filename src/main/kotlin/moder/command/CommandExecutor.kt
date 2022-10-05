@@ -1,9 +1,10 @@
 package moder.command
 
+import MsgListener
 import start
 import java.io.BufferedWriter
 
-class CommandExecutor{
+class CommandExecutor(private val msgListener: MsgListener){
     companion object{
         fun isExecuteCommandStart(line: String):Boolean=!(!(line start "/") && !(line start ">"))
         fun isExecuteCommandLine(line:String):Boolean=!(!(line start "/") && !(line start "$") && !(line start ">"))
@@ -26,7 +27,7 @@ class CommandExecutor{
     fun execute (aCommandLine:String,commandExecute:(Command,String,Data?,BufferedWriter)->Unit,writer: BufferedWriter):Boolean{
         var line = aCommandLine.trim()
         if (!isExecuteCommandLine(line)) {
-            println(line)
+            msgListener.sendLine(line)
             return true
         }
         if (commanding) {

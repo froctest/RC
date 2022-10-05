@@ -1,5 +1,6 @@
 package moder.command
 
+import MsgListener
 import moder.register.CommandRegister
 import start
 import java.io.BufferedWriter
@@ -32,7 +33,7 @@ object Commander {
 
     private val commandExecutors=HashMap<String,CommandExecutor>()
     private var lastKey ="^^NULL^^"
-    fun executeCommand(aLine:String,writer: BufferedWriter){
+    fun executeCommand(aLine:String,writer: BufferedWriter,msgListener: MsgListener=MsgListener.getConsoleInstance()){//TODO a
         var line=aLine
         val key=if (line start "^"){
             val aKey=line.split(" ")[0]
@@ -46,13 +47,14 @@ object Commander {
         }
         lastKey=key
 
-        if (!commandExecutors.containsKey(key))commandExecutors[key]=CommandExecutor()
+//        println("a: $line")
+        if (!commandExecutors.containsKey(key))commandExecutors[key]=CommandExecutor(msgListener)
         val commandExecutor=commandExecutors[key]!!
         thread {
             if (commandExecutor.execute(line,commandExecute,writer))
                 commandExecutors.remove(key)
         }
     }
-    fun executeCommand(aLine: String,result: Result) =executeCommand(aLine,result.bufferedWriter)
+    fun executeCommand(aLine: String,result: Result,msgListener: MsgListener= MsgListener.getConsoleInstance()) =executeCommand(aLine,result.bufferedWriter,msgListener)//TODO a
     private val commandExecute=fun(command: Command, commandLine:String, data: Data?,writer:BufferedWriter){command.executeCommand(commandLine, Invoker(data), Result(writer))}
 }

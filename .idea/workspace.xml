@@ -6,19 +6,23 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="ConsoleMod" />
+      <artifact name="InternetUtils" />
+      <artifact name="RC" />
+      <artifact name="SleepMod" />
+      <artifact name="StandardMod" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MsgListener.kt" afterDir="false" />
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 现在可以获取HandleId了&#10;&#10;通过RCConnected中的getHandleId()函数来获取HandleId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SleepMod/src/command/C_sleep.kt" beforeDir="false" afterPath="$PROJECT_DIR$/SleepMod/src/command/C_sleep.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Init.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Init.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCConnected.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCConnected.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCHandle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCHandle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleMod/src/eventlistener/EL_ServerClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleMod/src/eventlistener/EL_ServerClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MsgListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MsgListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCClient.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/CommandExecutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/CommandExecutor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664865729627</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: 现在可以获取HandleId了&#10;&#10;通过RCConnected中的getHandleId()函数来获取HandleId">
+      <created>1664963728915</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664963728915</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -316,7 +327,8 @@
     <MESSAGE value="feat: 让模组可以在同一Socket中同时运行多个任务&#10;&#10;与服务器发送指令时建议在指令前面加上&quot;^指令Id&#10;&quot;&#10;服务器会根据&lt;指令Id&gt;来将指令分发给合适的指令执行器&#10;只要指令没有结束接收参数,在相同&lt;指令Id&gt;的情况下,每次都会使用相同的指令执行器&#10;&#10;BREAKING CHANGE:&#10;创建了RCConnected接口&#10;将Client类继承RCConnected接口&#10;RCConnected接口指定了与Server通信的必要方法&#10;使用了Handle方案(即对每条指令的开头加上Id,通过Id来将指令分发给任务)&#10;让不同的任务并行运行" />
     <MESSAGE value="fix: 改进了模组依赖&#10;&#10;让模组不再依赖不需要的库&#10;减小了模组体积" />
     <MESSAGE value="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod" />
+    <MESSAGE value="feat: 现在可以获取HandleId了&#10;&#10;通过RCConnected中的getHandleId()函数来获取HandleId" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 现在可以获取HandleId了&#10;&#10;通过RCConnected中的getHandleId()函数来获取HandleId" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
