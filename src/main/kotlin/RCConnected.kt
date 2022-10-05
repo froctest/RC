@@ -17,4 +17,6 @@ interface RCConnected {
     fun sendCommandEnd()
     //冲刷缓存
     fun flush()
+
+    fun getHandleId() : String
 }

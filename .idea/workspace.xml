@@ -5,24 +5,21 @@
   </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SleepMod" />
+      <artifact name="ConsoleMod" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="fix: 改进了模组依赖&#10;&#10;让模组不再依赖不需要的库&#10;减小了模组体积">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SleepMod.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SleepMod/SleepMod.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SleepMod/src/StandardMod.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SleepMod/src/command/C_sleep.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/StandardMod.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/StandardMod.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="d2d61703-9b4f-4e32-87aa-6ef423c5d877" name="变更" comment="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MsgListener.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KotlinUtils/KotlinUtils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KotlinUtils/KotlinUtils.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SleepMod/src/command/C_sleep.kt" beforeDir="false" afterPath="$PROJECT_DIR$/SleepMod/src/command/C_sleep.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Init.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Init.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCConnected.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCConnected.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCHandle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCHandle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCServer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RCSocket.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/CommandExecutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/CommandExecutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/application/Run_RCServer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/moder/command/Result.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/moder/command/Result.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +71,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-11&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Project/RC/src/main/kotlin&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2643343&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -254,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664860972047</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod">
+      <created>1664865729627</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664865729627</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -273,6 +277,17 @@
       <map>
         <entry key="MAIN">
           <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="a3532c72-a3cb-4b68-b5a9-5358f1808714">
+          <value>
             <State />
           </value>
         </entry>
@@ -289,11 +304,6 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="dbbce6c4-52ed-40fd-ae94-54f68b5f527f" value="TOOL_WINDOW" />
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="做好了基础功能,还添加了mathMod来进行数学计算" />
@@ -305,19 +315,9 @@
     <MESSAGE value="feat: 将标准模组里的ServerClient分解为一个独立的模组&#10;&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;这个模组负责提供Server的命令行交互&#10;&#10;BREAKING CHANGE:&#10;将标准模组里的ServerClient分解为一个独立的模组:ConsoleMod&#10;所以标准模组以后不提供与单独运行相关的功能" />
     <MESSAGE value="feat: 让模组可以在同一Socket中同时运行多个任务&#10;&#10;与服务器发送指令时建议在指令前面加上&quot;^指令Id&#10;&quot;&#10;服务器会根据&lt;指令Id&gt;来将指令分发给合适的指令执行器&#10;只要指令没有结束接收参数,在相同&lt;指令Id&gt;的情况下,每次都会使用相同的指令执行器&#10;&#10;BREAKING CHANGE:&#10;创建了RCConnected接口&#10;将Client类继承RCConnected接口&#10;RCConnected接口指定了与Server通信的必要方法&#10;使用了Handle方案(即对每条指令的开头加上Id,通过Id来将指令分发给任务)&#10;让不同的任务并行运行" />
     <MESSAGE value="fix: 改进了模组依赖&#10;&#10;让模组不再依赖不需要的库&#10;减小了模组体积" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 改进了模组依赖&#10;&#10;让模组不再依赖不需要的库&#10;减小了模组体积" />
+    <MESSAGE value="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 添加了SleepMod&#10;&#10;使用SleepMod可以延迟执行指令&#10;语法:/sleep [时间单位] 时间 要延迟执行的指令&#10;&#10;BREAKING CHANGE: 添加了SleepMod" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/moder/command/Commander.kt</url>
-          <line>35</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

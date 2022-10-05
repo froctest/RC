@@ -40,7 +40,11 @@ class RCSocket private constructor(private val socket: Socket) : RCConnected{
 
                 while (true){
                     val line=reader.readLine() ?:continue
-                    Commander.executeCommand(line,writer)
+                    try {
+                        Commander.executeCommand(line,writer)
+                    }catch (e:Exception){
+                        e.printStackTrace()
+                    }
                 }
 
             }catch (connectionReset:SocketException){
@@ -92,5 +96,9 @@ class RCSocket private constructor(private val socket: Socket) : RCConnected{
     //冲刷缓存
     override fun flush(){
         writer.flush()
+    }
+
+    override fun getHandleId(): String {
+        throw IllegalArgumentException("RCSocket没有HandleId")
     }
 }
